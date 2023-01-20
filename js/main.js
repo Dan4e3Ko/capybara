@@ -57,6 +57,11 @@ let burgerMenu = document.querySelector('.block-nav-menu');
 let burgerLine = [];
 burgerLine = document.querySelectorAll('.burger-line');
 
+let withButton = [];
+withButton = document.querySelectorAll('.with-card-button');
+let formI = document.getElementById('formI');
+let closeForm = document.getElementById('closeForm');
+
 window.onload = function(){
     loadt = document.querySelector('.load-block');
     loadt.style.display = "none";
@@ -143,6 +148,16 @@ for(let i = 0; i < buttonsTeam.length; i++){
 }
 
 
+for(let i = 0; i < withButton.length; i++){
+    
+    withButton[i].addEventListener("click", function(){
+        formI.style.display = 'block';
+    })
+}
+closeForm.addEventListener("click", function(){
+    formI.style.display = 'none';
+})
+
 for(let i = 0; i < buttonsYouGet.length; i++){
     
     if(buttonsYouGet[i].classList.contains('youGet-button-active')){
@@ -162,6 +177,7 @@ for(let i = 0; i < buttonsYouGet.length; i++){
     buttonsYouGet[i].addEventListener('click', function() {
         if(this.classList.contains('youGet-button-active')) return;
 
+
         changeBlockYouGet(i, buttonid);
         this.classList.add('youGet-button-active');
         buttonActive.classList.remove('youGet-button-active');
@@ -171,6 +187,101 @@ for(let i = 0; i < buttonsYouGet.length; i++){
         console.log("click" + i)
     })
 }
+let weDoItem = [];
+weDoItem = document.querySelectorAll('.block-weDo-item');
+document.body.addEventListener("scroll", function () {
+
+    if(this.scrollTop > blocksWeDo[0].scrollHeight){
+        weDoItem[0].style.borderColor = "#F3F8FE";
+    }
+    else{
+        weDoItem[0].style.borderColor = "#F3F8FE00";
+    }
+
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 100){
+        weDoItem[1].style.borderColor = "#F3F8FE";
+    }
+    else{
+        weDoItem[1].style.borderColor = "#F3F8FE00";
+    }
+
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 300){
+        weDoItem[2].style.borderColor = "#F3F8FE";
+    }
+    else{
+        weDoItem[2].style.borderColor = "#F3F8FE00";
+    }
+
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 400){
+        weDoItem[3].style.borderColor = "#F3F8FE";
+    }
+    else{
+        weDoItem[3].style.borderColor = "#F3F8FE00";
+    }
+
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 600){
+        weDoItem[4].style.borderColor = "#F3F8FE";
+    }
+    else{
+        weDoItem[4].style.borderColor = "#F3F8FE00";
+    }
+
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 800){
+        weDoItem[5].style.borderColor = "#F3F8FE";
+    }
+    else{
+        weDoItem[5].style.borderColor = "#F3F8FE00";
+    }
+
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 1000){
+        weDoItem[6].style.borderColor = "#F3F8FE";
+    }
+    else{
+        weDoItem[6].style.borderColor = "#F3F8FE00";
+    }
+
+    if(this.scrollTop > blocksWeDo[0].scrollHeight ){
+        weDoItem[7].style.borderColor = "#F3F8FE";
+    }
+    else{
+        weDoItem[7].style.borderColor = "#F3F8FE00";
+    }
+
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 200){
+        weDoItem[8].style.borderColor = "#F3F8FE";
+    }
+    else{
+        weDoItem[8].style.borderColor = "#F3F8FE00";
+    }
+
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 450){
+        weDoItem[9].style.borderColor = "#F3F8FE";
+    }
+    else{
+        weDoItem[9].style.borderColor = "#F3F8FE00";
+    }
+
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 600){
+        weDoItem[10].style.borderColor = "#F3F8FE";
+    }
+    else{
+        weDoItem[10].style.borderColor = "#F3F8FE00";
+    }
+
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 800){
+        weDoItem[11].style.borderColor = "#F3F8FE";
+    }
+    else{
+        weDoItem[11].style.borderColor = "#F3F8FE00";
+    }
+
+    if(this.scrollTop > blocksWeDo[0].scrollHeight + 950){
+        weDoItem[12].style.borderColor = "#F3F8FE";
+    }
+    else{
+        weDoItem[12].style.borderColor = "#F3F8FE00";
+    }
+}, false);
 //
 for(let i = 0; i < buttonsStories.length; i++){
     
@@ -214,6 +325,100 @@ for(let i = 0; i < buttonsWith.length; i++){
     })
 }
 
+// let events = null;
+// document.addEventListener("touchstart", function (e) {
+//     events = e;
+// });
+// document.addEventListener("touchmove", function (e) {
+    
+// });
+// document.addEventListener("touched", function (e) {
+//     if (events) {
+//         alert("Move delta: " + (e.touches[0].pageY - events.touches[0].pageY))
+//     }
+//     events = null;
+// });
+
+let rad1 = document.getElementById('rad1');
+let rad2 = document.getElementById('rad2');
+let rad3 = document.getElementById('rad3');
+
+let result = "Make a Call";
+
+rad1.addEventListener("click", function(){
+    result = "Make a Call";
+})
+rad2.addEventListener("click", function(){
+    result = "WhatsApp";
+})
+rad3.addEventListener("click", function(){
+    result = "Telegram";
+})
+
+let area = document.getElementById('area');
+
+let tg = {
+    token: "5256737385:AAHlQd83rrsgc5vwjL0k-6mDYfsz7J_ZD7I", 
+    chat_id: "-1001212271187" 
+}
+let sendTg = document.getElementById('sendTg');
+sendTg.addEventListener("click", function(e){
+    e.preventDefault();
+
+    let info = document.forms.forma;
+    let name = info.elements.namr.value;
+    let phone = info.elements.phoneE.value;
+
+
+    if(String(name).length < 5){
+        console.log('govno name')
+        info.elements.namr.style.boxShadow = "0 0 5px red";
+        return;
+    }
+    else{
+        info.elements.namr.style.boxShadow = "none";
+    }
+    if(String(phone).length < 10){
+        console.log('govno phone')
+        info.elements.phoneE.style.boxShadow = "0 0 5px red";
+        return;
+    }
+    else{
+        info.elements.phoneE.style.boxShadow = "none";
+    }
+
+    console.log(result);
+    console.log(area.value);
+    let r = area.value;
+    sendMessage(
+        "Заявка с сайта!\n" +
+        "Имя: " + String(name) + "\n" +
+        "Телефон: " + String(phone) + "\n" +
+        "Способ связи: " + String(result) + "\n" +
+        "Комментарий: " + String(r)
+    );
+
+    result = "Make a Call";
+    info.elements.namr.value = "";
+    info.elements.phoneE.value = "";
+    area.value = "";
+    
+})
+// https://api.telegram.org/bot715125500:5256737385:AAHlQd83rrsgc5vwjL0k-6mDYfsz7J_ZD7I/sendMessage?chat_id=-1001212271187&parse_mode=HTML&text=test
+function sendMessage(text)
+{
+    const url = `https://api.telegram.org/bot${tg.token}/sendMessage` // The url to request
+    const obj = {
+        chat_id: tg.chat_id, // Telegram chat id
+        text: text // The text to send
+    };
+    const xht = new XMLHttpRequest();
+    xht.open("POST", url, true);
+    xht.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+    xht.send(JSON.stringify(obj));
+}
+
+
 for(let i = 0; i < buttonsStories2.length; i++){
     
     if(buttonsStories2[i].style.opacity > '0.4'){
@@ -235,18 +440,30 @@ for(let i = 0; i < buttonsStories2.length; i++){
     })
 }
 //
+let d = [];
+    d = document.querySelectorAll('.block-weDo-elements');
+    d[0].style.zIndex = '3';
+    d[1].style.zIndex = '0';
+    let b = document.getElementById('project');
+
 buttonsWeDo[0].addEventListener('click', function(){
-    console.log('wedo fsdfsd')
     if(this.classList.contains('weDo-button-active')) return;
     this.classList.add('weDo-button-active');
     blocksWeDo[0].classList.remove('weDo-hide');
 
     buttonsWeDo[1].classList.remove('weDo-button-active');
     blocksWeDo[1].classList.add('weDo-hide');
+    
+
+    d[1].style.zIndex = '0';
+    d[0].style.zIndex = '3';
+
+    b.style.Height = "1000px";
+
+
 })
 
 buttonsWeDo[1].addEventListener('click', function(){
-    console.log('wedo fsdfsd')
     if(this.classList.contains('weDo-button-active')) return;
     this.classList.add('weDo-button-active');
     blocksWeDo[1].classList.remove('weDo-hide');
@@ -254,6 +471,10 @@ buttonsWeDo[1].addEventListener('click', function(){
     buttonsWeDo[0].classList.remove('weDo-button-active');
     blocksWeDo[0].classList.add('weDo-hide');
 
+    d[0].style.zIndex = '0';
+    d[1].style.zIndex = '3';
+
+    b.style.Height = "1200px";
 
 })
 

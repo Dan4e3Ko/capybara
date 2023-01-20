@@ -144,7 +144,7 @@ header{
 
 .burger-line{
     width: 35px;
-    height: 5px;
+    height: 1px;
     border-radius: 10px;
     background-color: var(--main-color);
     transition: .5s;

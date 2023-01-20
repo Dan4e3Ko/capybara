@@ -195,7 +195,7 @@
 
     }
     .block-youGet-content>p{
-        font-size: 20px;
+        font-size: 17px;
     }
     .block-youGet-icon{
         margin-left: 5px;
@@ -218,6 +218,9 @@
     }
 }
 @media (max-width: 774px) {
+    .block-weDo{
+        height: 1200px;
+    }
     .block-stories-container{
         position: relative;
     }
@@ -428,14 +431,17 @@
     }
     .block-weDo-content{
         position: relative;
+        justify-content: center;
     }
     .block-weDo-elements{
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        padding: 30px;
+        padding: 15px;
+        justify-content: center;
     }
+
     .block-weDo-icon{
         -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -672,6 +678,12 @@
         width: 580px;
         height: 250px;
     }
+    .block-weDo-item{
+        padding-left: 5px;
+        padding-right: 5px;
+        width: 90%;
+    }
+    
 }
 @media (max-width: 500px) {
     .block-nav-menu>p{
@@ -747,7 +759,6 @@
     .block-weDo-text{
         font-size: 13px;
     }
-
     .block-stories-title>p{
         font-size: 35px;
     }
